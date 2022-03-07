@@ -1,6 +1,7 @@
 package logic;
 
-import javafx.scene.control.TextField;
+
+import popups.ErrorPopUp;
 public class LoginChecks {
 
 	final static int LENGTH_OF_CARD_NUMBER = 19;
@@ -16,13 +17,15 @@ public class LoginChecks {
 			numbers += set;
 		}
 		if(UserInputCardNo.length() != LENGTH_OF_CARD_NUMBER) {
-			System.out.println("Incorrect number at input");
+			ErrorPopUp.showError("Incorrect Format for Card number, please enter in format 1111-1111-1111-1111 \n"
+					+ "NOTE ONLY NUMERICAL VALUES ARE ACCEPTED");
 			return false;
 		}
 		else if((UserInputCardNo.charAt(FIRST_DASH) != '-') || 
 				(UserInputCardNo.charAt(SECOND_DASH)!= '-') ||
 				(UserInputCardNo.charAt(THIRD_DASH) != '-')) {
-			System.out.println("Incorrect Format");
+			ErrorPopUp.showError("Incorrect Format for Card number, please enter in format 1111-1111-1111-1111 \n"
+					+ "NOTE ONLY NUMERICAL VALUES ARE ACCEPTED");
 			return false;
 		}
 		else if (numbers.matches("[0-9]+")== false) {
@@ -34,10 +37,12 @@ public class LoginChecks {
 
 	public static boolean pinNumberCheck(String UserInputPin) {
 		if(UserInputPin.length() != LENGTH_OF_PIN_NUMBER) {
-			System.out.println("Pin number not adequate size");
+			ErrorPopUp.showError("Incorrect Format for pin, please enter in format 1111 \n"
+					+ "NOTE ONLY NUMERICAL VALUES ARE ACCEPTED");
 			return false;
 		}else if(UserInputPin.matches("[0-9]+")== false) {
-			System.out.println("Can only contain numbers");
+			ErrorPopUp.showError("Incorrect Format for pin, please enter in format 1111 \n"
+					+ "NOTE ONLY NUMERICAL VALUES ARE ACCEPTED");
 			return false;
 		}
 		else {
