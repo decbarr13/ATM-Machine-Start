@@ -20,6 +20,7 @@ public class LoginScreen extends Application {
 
 	public void createWindow(String[] args) {
 		launch(args);
+		System.out.println();
 	}
 
 	@Override

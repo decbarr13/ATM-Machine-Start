@@ -15,7 +15,7 @@ public class ErrorPopUp {
 		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle("Checkout Percentage");
 		window.setMinWidth(250);
-		
+		System.out.println();
 		Label error = new Label(errorLabel);
 		HBox layout = new HBox();
 		layout.getChildren().add(error);

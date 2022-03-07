@@ -18,6 +18,7 @@ public class SignUpPopUp {
 		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle("Checkout Percentage");
 		window.setMinWidth(250);
+		System.out.println();
 		
 		Label firstNameLabel = new Label("First Name");
 		Label surnameLabel = new Label("Surname");

@@ -12,6 +12,7 @@ public class AccountExistsPopUp {
 		window.initModality(Modality.APPLICATION_MODAL);
 		window.setTitle("Checkout Percentage");
 		window.setMinWidth(250);
+		System.out.println();
 		
 		Label error = new Label("Account Already Exists");
 		HBox layout = new HBox();

@@ -24,6 +24,7 @@ public class SignIn {
 						String pin = accountDataSplit[2];
 						Accounts account = new Accounts(cardNo,pin,name);
 						MenuScreen.start(account);
+						System.out.println();
 					}
 				else {
 						ErrorPopUp.showError("Account Number and Pin do not match");

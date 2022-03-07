@@ -43,6 +43,7 @@ public class MenuScreen {
 		transfer.setOnAction(e-> account.transferToNewAccount());
 		history.setOnAction(e-> account.getTransactionHistory());
 		quit.setOnAction(e-> window.close());
+		System.out.println();
 		
 		Scene scene = new Scene(layout);
 		window.setScene(scene);

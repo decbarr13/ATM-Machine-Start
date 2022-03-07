@@ -15,6 +15,7 @@ public class LoginChecks {
 		String numbers = "";
 		for(String set:onlyNumbers) {
 			numbers += set;
+			System.out.println();
 		}
 		if(UserInputCardNo.length() != LENGTH_OF_CARD_NUMBER) {
 			ErrorPopUp.showError("Incorrect Format for Card number, please enter in format 1111-1111-1111-1111 \n"

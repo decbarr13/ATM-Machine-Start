@@ -26,7 +26,9 @@ public class SignUp {
 			WriteData.writeToFile(userInputCardNo, userInputPin, fullName);
 			createAccountHistoryFile(fullName, userInputCardNo.getText());
 			createAccountInfoFile(fullName, userInputCardNo.getText());
+			System.out.println();
 			return true;
+			
 		}
 		return false;
 	}
