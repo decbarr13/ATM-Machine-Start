@@ -19,6 +19,7 @@ public class ReadData {
 					continue;
 				} else {
 					dataArray.add(data);
+					System.out.println();
 				}
 			}
 			myReader.close();
@@ -27,5 +28,6 @@ public class ReadData {
 			e.printStackTrace();
 		}
 		return dataArray;
+	
 	}
 }

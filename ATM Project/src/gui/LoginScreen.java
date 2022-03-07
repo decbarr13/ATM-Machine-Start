@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import logic.SignIn;
-import logic.SignUp;
+import popups.SignUpPopUp;
 
 public class LoginScreen extends Application {
 	
@@ -20,6 +20,7 @@ public class LoginScreen extends Application {
 
 	public void createWindow(String[] args) {
 		launch(args);
+		System.out.println();
 	}
 
 	@Override
@@ -74,7 +75,8 @@ public class LoginScreen extends Application {
 		
 		//Action Handlers
 		
-		signUp.setOnAction(e-> SignUp.creatingAccount(userInputCardNo,userInputPin));
+		signUp.setOnAction(e-> {
+			SignUpPopUp.addingName();});
 		signIn.setOnAction(e-> SignIn.checkingLoginDetails(userInputCardNo,userInputPin));
 		clear.setOnAction(e->{
 			userInputCardNo.clear();

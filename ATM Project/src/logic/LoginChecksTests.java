@@ -15,6 +15,7 @@ public class LoginChecksTests {
 	public void CardNumberTooLongInputTest() {
 		System.out.println("Test 2");
 		assertFalse(LoginChecks.CardNumberCheck("4444-4444-4444-4444-4444"));
+		System.out.println();
 	}
 	@Test
 	public void CardNumberIncorrectCharacterTest() {
